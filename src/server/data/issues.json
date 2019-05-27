@@ -1,0 +1,65 @@
+[
+    {
+        "id": 6734,
+        "title": "Kuweta nie wyczyszczona",
+        "description": "W kuwecie kota jest pełno, kot odmawia korzystania i leje w buty.",
+        "state": "PENDING",
+        "resolution": null,
+        "created_date": "2019-05-18 02:01:42",
+        "sla": 1
+    },
+    {
+        "id": 6751,
+        "title": "Kolanko pod umywalką kapie",
+        "description": "Kolanko pod umywalką jest już trochę mokre.",
+        "state": "PENDING",
+        "resolution": null,
+        "created_date": "2019-05-19 08:14:48",
+        "sla": 5
+    },
+    {
+        "id": 6768,
+        "title": "Światło w łazience",
+        "description": "Jedna z żarówek w kinkiecie padła.",
+        "state": "PENDING",
+        "resolution": null,
+        "created_date": "2019-05-20 05:27:12",
+        "sla": 5
+    },
+    {
+        "id": 6785,
+        "title": "Hamulce w samochodzie",
+        "description": "Podjechać do warsztatu wymienić tarcze i klocki",
+        "state": "OPEN",
+        "resolution": null,
+        "created_date": "2019-05-21 09:49:44",
+        "sla": 3
+    },
+    {
+        "id": 6802,
+        "title": "Rozlatujące się krzesło",
+        "description": "Skleić krzesło w salonie, rozpada się.",
+        "state": "OPEN",
+        "resolution": null,
+        "created_date": "2019-05-22 13:12:27",
+        "sla": 3
+    },
+    {
+        "id": 6819,
+        "title": "Uchwyty na skrzynki",
+        "description": "Wykonać uchwyty na skrzynki na balkonie",
+        "state": "PENDING",
+        "resolution": null,
+        "created_date": "2019-05-23 03:54:02",
+        "sla": 1
+    },
+    {
+        "id": 6836,
+        "title": "Skrzypiące drzwi od przedsionka",
+        "description": "Drzwi od przedsionka potwornie skrzypią. PRzesmarować smarem hybrydowym.",
+        "state": "CLOSED",
+        "resolution": null,
+        "created_date": "2019-05-24 17:39:22",
+        "sla": 1
+    }
+]

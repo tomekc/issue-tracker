@@ -1,0 +1,31 @@
+parser: babel-eslint
+# extends:
+# - airbnb
+env:
+  browser: true
+  node: true
+rules:
+  indent:
+    - warn
+    - 4
+  no-console: 'off'
+  comma-dangle: 'off'
+  react/jsx-filename-extension: 'off'
+  no-empty-function: off
+  complexity:
+    - warn
+  max-len:
+    - warn
+    - code: 120
+  quote-props: off
+  no-var: error
+  no-multiple-empty-lines: off
+  key-spacing: error
+  lines-around-comment: off
+  no-warning-comments: off
+  no-else-return: off
+  semi:
+  - error
+  - always  
+
+
