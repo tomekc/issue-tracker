@@ -1,29 +1,33 @@
 import React, { Component } from "react";
 import "./app.css";
+import "./bulma.css";
 import ReactImage from "./react.png";
+import Issue from "./Issue";
 import Moment from "moment";
 
 export default class App extends Component {
-    state = { username: null };
+    state = {
+        issues: []
+    };
 
     componentDidMount() {
-        fetch("/api/getUsername")
+        fetch("/api/issues")
             .then(res => res.json())
-            .then(user => this.setState({ username: user.username }));
+            .then(issues => this.setState({ issues: issues }));
     }
 
     render() {
-        const { username } = this.state;
+        const { issues } = this.state;
 
-        var a = Moment('2016-01-01'); 
-        var b = a.add(1, 'week'); 
-
-        const date = b.format();
         return (
-            <div>
-                {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading... please wait!</h1>}
-                <p>{date}</p>
-                <img src={ReactImage} alt="react" />
+            <div className="columns">
+                <div className="column is-half">
+                    <div>
+                        {issues.map(i => (
+                            <Issue model={i} key={i.id} />
+                        ))}
+                    </div>
+                </div>
             </div>
         );
     }

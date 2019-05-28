@@ -3,6 +3,9 @@ h1 {
 }
 
 body {
-  text-align: center;
   margin: auto;
+}
+
+.issue-card {
+  margin-bottom: 20px;
 }
