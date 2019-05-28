@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./app.css";
 import "./bulma.css";
 import Issue from "./Issue";
+import { modifyElement } from './helpers';
 
 export default class App extends Component {
     state = {
@@ -17,18 +18,20 @@ export default class App extends Component {
     onChangeState = (id, state) => {
         console.log(`Will change state of ${id} to ${state}`);
 
-        let newState = this.state.issues.map(i => {
-            if (i.id === id) {
-                return {
-                    ...i,
-                    state: state
-                };
-            } else {
-                return i;
-            }
-        });
+        // let newState = this.state.issues.map(i => {
+        //     if (i.id === id) {
+        //         return {
+        //             ...i,
+        //             state: state
+        //         };
+        //     } else {
+        //         return i;
+        //     }
+        // });
 
-        this.setState({ issues: newState });
+        let newIssues = modifyElement(this.state.issues, 'id', id, {state: state});
+
+        this.setState({ issues: newIssues });
         // TODO update UI only after succesful request
 
         fetch(`/api/issues/${id}/state`, {
