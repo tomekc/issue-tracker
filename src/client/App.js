@@ -14,6 +14,23 @@ export default class App extends Component {
             .then(issues => this.setState({ issues: issues }));
     }
 
+    onChangeState = (id, state) => {
+        console.log(`Will change state of ${id} to ${state}`);
+
+        let newState = this.state.issues.map(i => {
+            if (i.id === id) {
+                return {
+                    ...i,
+                    state: state
+                };
+            } else {
+                return i;
+            }
+        });
+
+        this.setState({issues: newState});
+    };
+
     render() {
         const { issues } = this.state;
 
@@ -22,7 +39,7 @@ export default class App extends Component {
                 <div className="column is-half">
                     <div>
                         {issues.map(i => (
-                            <Issue model={i} key={i.id} />
+                            <Issue model={i} key={i.id} onChangeState={this.onChangeState} />
                         ))}
                     </div>
                 </div>

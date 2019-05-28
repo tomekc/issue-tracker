@@ -1,8 +1,9 @@
 import React from "react";
 import StateTag from "./StateTag";
+import StateSwitcher from "./StateSwitcher";
 import Moment from 'moment';
 
-function Issue({ model }) {
+function Issue({ model, onChangeState }) {
 
     let date = Moment(model.created_date).format('MMMM Do YYYY, hh:mm');
 
@@ -22,6 +23,7 @@ function Issue({ model }) {
                     {model.description}
                     <time>{model.created_at}</time>
                 </div>                
+                <StateSwitcher id={model.id} currentState={model.state} onChange={onChangeState} />
                 <div><b>Reported:</b> {date}</div>
             </div>
         </div>
