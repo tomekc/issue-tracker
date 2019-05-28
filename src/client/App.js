@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./app.css";
 import "./bulma.css";
-import ReactImage from "./react.png";
 import Issue from "./Issue";
-import Moment from "moment";
 
 export default class App extends Component {
     state = {
