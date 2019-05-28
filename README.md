@@ -1,7 +1,35 @@
-# simple-react-full-stack
+# Ract full-stack learning project
 
-[![Build Status](https://travis-ci.org/crsandeep/simple-react-full-stack.svg?branch=master)](https://travis-ci.org/crsandeep/simple-react-full-stack)
-[![Greenkeeper badge](https://badges.greenkeeper.io/crsandeep/simple-react-full-stack.svg)](https://greenkeeper.io/)
+## Introduction
+
+The project is build upon [simple-react-full-stack boilerplate](https://github.com/crsandeep/simple-react-full-stack). It contains configured React app, Node.js server (built on Express.js) and Webpack for bundling it all together.
+
+## Quick start
+
+```
+# Install dependencies
+yarn (or npm install)
+
+# Start development server
+yarn dev (or npm run dev)
+
+# Build for production
+yarn build (or npm run build)
+
+# Start production server
+yarn start (or npm start)
+```
+
+## The Issue Tracker project
+
+This is simple issue tracker. As a "persistence" the app uses in memory JSON file loaded from `src/server/data/issues.json`. All changes are stored in memory. That means, restarting the server side will "clean" the data.
+
+In dev mode `yarn dev` changes to React code are hot-reloaded, just as if create by `create-react-app`.
+
+Server side code is monitored by `nodemon` which monitor for file changes and restarts backend on every file save.
+
+
+# About simple react full stack
 
 This is a boilerplate to build a full stack web application using React, Node.js, Express and Webpack. It is also configured with webpack-dev-server, eslint, prettier and babel.
 
@@ -9,7 +37,6 @@ This is a boilerplate to build a full stack web application using React, Node.js
   - [Introduction](#introduction)
     - [Development mode](#development-mode)
     - [Production mode](#production-mode)
-  - [Quick Start](#quick-start)
   - [Documentation](#documentation)
     - [Folder Structure](#folder-structure)
     - [Babel](#babel)
@@ -35,28 +62,6 @@ In the development mode, we will have 2 servers running. The front end code will
 ### Production mode
 
 In the production mode, we will have only 1 server running. All the client side code will be bundled into static files using webpack and it will be served by the Node.js/Express application.
-
-## Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/crsandeep/simple-react-full-stack
-
-# Go inside the directory
-cd simple-react-full-stack
-
-# Install dependencies
-yarn (or npm install)
-
-# Start development server
-yarn dev (or npm run dev)
-
-# Build for production
-yarn build (or npm run build)
-
-# Start production server
-yarn start (or npm start)
-```
 
 ## Documentation
 
