@@ -13,10 +13,10 @@ function StateSwitcher({id, currentState, onChange}) {
 
     let buttons = [];
     if (currentState == 'PENDING') {
-        buttons.push(<a key='1' className='button is-small' onClick={makeOpen} >OPEN</a>);
+        buttons.push(<span className='button-row-element' key='1'><a  className='button is-small' onClick={makeOpen} >OPEN</a></span>);
     }
     if (currentState == 'OPEN' || currentState == 'PENDING') {
-        buttons.push(<a key='2' className='button is-small' onClick={makeClosed}>CLOSE</a>);
+        buttons.push(<span className='button-row-element' key='2'><a  className='button is-small' onClick={makeClosed}>CLOSE</a></span>);
     }
     return (
         <div>

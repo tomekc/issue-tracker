@@ -9,3 +9,7 @@ body {
 .issue-card {
   margin-bottom: 20px;
 }
+
+.button-row-element {
+  padding-right: 8px;
+}
