@@ -28,7 +28,16 @@ export default class App extends Component {
             }
         });
 
-        this.setState({issues: newState});
+        this.setState({ issues: newState });
+        // TODO update UI only after succesful request
+
+        fetch(`/api/issues/${id}/state`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ state: state })
+        });
     };
 
     render() {
