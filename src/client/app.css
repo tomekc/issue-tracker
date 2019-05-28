@@ -6,6 +6,11 @@ body {
   margin: auto;
 }
 
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .issue-card {
   margin-bottom: 20px;
 }

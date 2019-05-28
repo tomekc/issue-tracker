@@ -5,11 +5,11 @@ function StateSwitcher({id, currentState, onChange}) {
 
     let makeOpen = () => {
         onChange(id,'OPEN');
-    }
+    };
 
     let makeClosed = () => {
         onChange(id,'CLOSED');
-    }
+    };
 
     let buttons = [];
     if (currentState == 'PENDING') {
