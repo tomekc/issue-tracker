@@ -1,5 +1,7 @@
 .vscode
+.idea
 node_modules
+!src/server/node_modules
 dist
 *.log
 yarn.lock
